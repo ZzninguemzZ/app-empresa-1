@@ -1,0 +1,81 @@
+/*CONTAINER DA SECCTION FUNCTIONS*/
+.app_functions {
+    text-align: center;
+    padding: 40px 20px;
+    scroll-margin-top: 73px;
+}
+
+/*TÍTULO DA SECTION FUNCTIONS*/
+.app_functions h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/*SUBTÍTULO DA SECTION FUNCTIONS*/
+.app_functions h3 {
+    font-weight: normal;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/*COLUNAS DA SECTION FUNCTIONS*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/*CARD DA SECTION FUNCTIONS*/
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e6e6e6;
+    text-align: left;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    border-color: #ff7a00;
+    transform: translateY(-3px);
+}
+
+/*ICONS CARD DA SECTION FUNCTIONS*/
+.icon_box {
+    background: #ff7a00;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/*TÍTULO CARD DA SECTION FUNCTIONS*/
+.card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/*DESCRIÇÃO CARD DA SECTION FUNCTIONS*/
+.card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

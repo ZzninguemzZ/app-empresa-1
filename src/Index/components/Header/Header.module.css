@@ -1,0 +1,151 @@
+/* ----------- CONTAINER HEADER ----------- */
+header {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+  background-color: var(--background-header);
+  border-bottom: 1px solid var(--border-color-3);
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  width: 100vw;
+}
+
+/* ----------- CONTAINER DA LOGO E O TÍTULO ----------- */
+.leftContent {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adiciona um espaçamento entre os elementos */
+}
+
+/* ----------- LOGO ----------- */
+.leftContent img {
+  height: 50px;
+  width: 50px;
+  margin-right: 25px;
+  border-radius: 10px;
+  margin-left: 10%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* ----------- TITULO HEADER ----------- */
+.nameApp {
+  font-size: 1.25rem;
+  font-weight: bold; /* Adiciona negrito ao texto */
+  text-align: center;
+  left: 120px;
+  position: absolute;
+}
+
+/* ----------- BOTÃO ABRIR SIDEBAR ----------- */
+.menuButton {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ----------- RESPONSIVIDADE ----------- */
+
+@media (max-width: 1160px) {
+  /* ----------- BOTÃO ABRIR SIDEBAR APARECE----------- */
+  .menuButton {
+    display: block;
+    position: absolute;
+    right: 75px;
+  }
+  /* ----------- TITULO DA HEADER FICA CENTRALIZADO ----------- */
+  .nameApp {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.25rem;
+  }
+  /* ----------- OVERLAY (FUNDO ESCURO) PARA QUANDO A SIDEBAR APARECER ----------- */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: background 0.3s ease;
+  }
+
+  .overlay.ativo {
+    background: var(--background-pattern-5);
+    pointer-events: all;
+    z-index: 2;
+  }
+
+  /* ----------- SIDEBAR DESATIVADA ----------- */
+  .sidebarApp {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    max-height: 100vh;
+    background: var(--background-pattern-1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: top 0.3s ease;
+    box-shadow: -3px 0 8px var(--background-pattern-5);
+    z-index: 3;
+  }
+
+  /* ----------- SIDEBAR ATIVADA ----------- */
+  .sidebarApp.ativa {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    transform: translateX(0%);
+  }
+
+  /* ----------- MENU ADAPTADO PARA SIDEBAR----------- */
+  .botaoNavegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    position: static;
+  }
+
+  .botaoNavegacao a {
+    font-size: 1.5rem;
+    color: var(--color-text-3);
+    text-decoration: none;
+  }
+
+  .botaoNavegacao a:hover {
+    color: var(--background-pattern-4);
+  }
+
+  /* ----------- BOTÃO LOGIN ADAPTADO PARA SIDEBAR ----------- */
+  .loginDiv button {
+    margin-top: 20px;
+    width: 100%;
+    right: 10px;
+  }
+
+  .loginDiv button:hover {
+    filter: brightness(0.9);
+  }
+
+  /* ----------- BOTÃO PARA FECHAR A SIDEBAR ----------- */
+  .closeSidebar {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: block;
+  }
+}

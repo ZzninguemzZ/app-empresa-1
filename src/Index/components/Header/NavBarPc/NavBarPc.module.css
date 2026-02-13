@@ -1,0 +1,152 @@
+/* ----------- SIDEBAR ESCONDIDA ----------- */
+.sidebarApp {
+  position: absolute;
+  right: 90px;
+  display: flex;
+}
+
+/* ----------- BOTÃO FECHAR SIDEBAR ----------- */
+.closeSidebar {
+  display: none;
+}
+
+/* ----------- MENU ----------- */
+.botaoNavegacao {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25px;
+}
+
+/* ----------- BOTÕES MENU ----------- */
+.botaoNavegacao a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.botaoNavegacao a:hover {
+  color: var(--background-pattern-4);
+  font-weight: 700;
+}
+
+/* ----------- BOTÃO DE LOGIN ----------- */
+.loginDiv button {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--background-pattern-4);
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--color-text-1);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.loginDiv button:hover {
+  background-color: var(--background-pattern-4);
+  font-weight: 700;
+}
+
+/* ----------- BOTÃO ABRIR SIDEBAR APARECE ----------- */
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 1160px) {
+  /* ----------- BOTÃO ABRIR SIDEBAR APARECE----------- */
+  .menuButton {
+    display: block;
+    position: absolute;
+    right: 5vw;
+  }
+  /* ----------- OVERLAY (FUNDO ESCURO) PARA QUANDO A SIDEBAR APARECER ----------- */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: background 0.3s ease;
+  }
+
+  .overlay.ativo {
+    background: var(--background-pattern-5);
+    pointer-events: all;
+    z-index: 2;
+  }
+
+  /* ----------- SIDEBAR DESATIVADA ----------- */
+  .sidebarApp {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    max-height: 100vh;
+    background: var(--background-pattern-1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: top 0.3s ease;
+    box-shadow: -3px 0 8px var(--background-pattern-5);
+    z-index: 3;
+  }
+
+  /* ----------- SIDEBAR ATIVADA ----------- */
+  .sidebarApp.ativa {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    transform: translateX(0%);
+  }
+
+  /* ----------- MENU ADAPTADO PARA SIDEBAR----------- */
+  .botaoNavegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    position: relative;
+  }
+
+  .botaoNavegacao a {
+    font-size: 1.5rem;
+    color: var(--color-text-3);
+    text-decoration: none;
+  }
+
+  .botaoNavegacao a:hover {
+    color: var(--background-pattern-4);
+  }
+
+  /* ----------- BOTÃO LOGIN ADAPTADO PARA SIDEBAR ----------- */
+  .loginDiv button {
+    margin-top: 20px;
+    width: 100%;
+    right: 10px;
+  }
+
+  .loginDiv button:hover {
+    filter: brightness(0.9);
+  }
+
+  /* ----------- BOTÃO PARA FECHAR A SIDEBAR ----------- */
+  .closeSidebar {
+    position: absolute;
+    top: 20px;
+    right: 5vw;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: block;
+  }
+}

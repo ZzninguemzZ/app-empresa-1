@@ -1,0 +1,142 @@
+.overflow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-pattern-5);
+  backdrop-filter: blur(2px);
+  z-index: 4;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  padding: 0px;
+  border-radius: 16px;
+  z-index: 5;
+  background-color: var(--background-pattern-1);
+  overflow: hidden;
+}
+
+.header {
+  background-image: var(--background-image-pattern-1);
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-1);
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.header button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-text-1);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.header button:hover {
+  background-color: var(--background-pattern-2);
+}
+
+.form {
+  padding: 32px;
+}
+
+.divinput {
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.divinput input {
+    background-color: var(--background-pattern-10);
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.bottomform {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.remindme {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    background: none;
+    align-items: center;
+}
+
+.bottomform a {
+    color: var(--color-text-4);
+    text-decoration: none;
+}
+
+.login {
+  background-color: var(--background-pattern-4);
+  border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.loginsmarttext {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.loginsmarttext::after, .loginsmarttext::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--background-pattern-5);
+}
+
+.loginsmartoptions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.google, .microsoft {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color-1);
+  width: 45%;
+  background: none;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google:hover, .microsoft:hover {
+  background-color: var(--background-pattern-2);
+}

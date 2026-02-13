@@ -1,0 +1,119 @@
+/*CONTAINER DA SECTION HISTORY*/
+.history {
+    display: flex;
+    gap: 75px;
+    background-color: var(--background-pattern-2);
+    padding: 50px 10vw;
+    scroll-margin-top: 73px;
+    width: 100%;
+}
+
+#history {
+    scroll-margin-top: 73px;
+}
+
+/*IMAGEM SECTION HISTORY*/
+.img {
+    max-width: calc(300px *3);
+    max-height: calc(444.17px *3);
+    width: 100%;
+}
+
+.img img {
+    width: 100%;
+    box-shadow: 0px 10px 30px var(--border-color-2);
+    border-radius: 10px;
+
+}
+
+/*MINO TEXTO SECTION HISTORY*/
+.mini_titulo {
+    color: var(--color-text-4);
+    background-color: var(--background-pattern-9);
+    border-radius: 10px;
+    padding: 5px 0px;
+    width: 200px;
+    text-align: center;
+    margin-top: calc(pow(1.2px,  100vw));
+    margin-bottom: 30px;
+}
+
+/*TITULO DA SECTION HISTORY*/
+.titulo {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/*TEXTO DA SECTION HISTORY*/
+.paragrafo {
+    color: var(--color-text-3);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+/*LISTA DE BENEFICIOS DO SOFTWARE*/
+.lista{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.item_lista {
+    display: flex;
+    gap: 15px;
+    vertical-align: middle;
+}
+
+.icone_lista {
+    color: var(--icon-color-1);
+}
+
+.texto_lista {
+    color: var(--color-text-3);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/*CHAMARIZ PARA A DEMONSTRAÇÃO EXCLUZIVA*/
+.demonstracao {
+    background-image: var(--background-image-pattern-1);
+    border-radius: 15px;
+    padding: 30px 25px;
+}
+
+/*CABEÇALHO DA DEMONSTRAÇÃO EXCLUZIVA*/
+
+.demonstracao_cabecalho {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: var(--color-text-1);
+}
+
+.demonstracao_icone {
+    font-size: 32px;
+    background-color: var(--background-pattern-2);
+    width: 48px;
+    border-radius: 100%;
+    padding: 3px;
+    height: 48px;
+
+
+}
+
+/*PARAGRAFO DA DEMONSTRAÇÃO EXCLUZIVA*/
+.demonstracao_paragrafo {
+    color: var(--color-text-1);
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+@media (max-width: 1160px) {
+    .img {
+        display: none;
+    }
+}

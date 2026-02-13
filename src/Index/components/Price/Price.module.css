@@ -1,0 +1,138 @@
+.container {
+  padding: 80px 30px;
+}
+
+.container h1 {
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: var(--color-text-3);
+  font-weight: 400;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  padding: 50px 0px;
+}
+
+.card {
+  border: 1px solid var(--border-color-1);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.card h1 {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.card h2 {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.card_professional_decoy {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  background-color: var(--background-pattern-6);
+  color: var(--color-text-2);
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 4px 16px;
+}
+
+.card_professional {
+  background-image: var(--background-image-pattern-1);
+  color: var(--color-text-1);
+  width: 30%;
+  max-width: 400px;
+  padding: 32px;
+}
+
+.card_basic {
+  position: relative;
+  width: 30%;
+  max-width: 400px;
+  padding: 32px;
+}
+
+.card_enterprise {
+  position: relative;
+  width: 30%;
+  max-width: 400px;
+  padding: 32px;
+}
+
+.card_professional h2 {
+  color: var(--color-text-1);
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.item_lista {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.texto_lista {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.button_basic,
+.button_enterprise {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -150%);
+  white-space: nowrap;
+  padding: 8px 16px;
+  background-color: var(--background-pattern-4);
+  color: var(--color-text-1);
+  border-radius: 8px;
+}
+
+.button_professional {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -150%);
+  white-space: nowrap;
+  padding: 8px 16px;
+  background-color: var(--background-pattern-1);
+  color: var(--color-text-4);
+  border-radius: 8px;
+}
+
+
+@media (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card_basic, .card_professional, .card_enterprise {
+    width: 100%;
+  }
+}

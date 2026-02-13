@@ -1,0 +1,7 @@
+.container {
+  position: absolute;
+  top: 60px;
+  left: var(--width-navbar);
+  transition: left var(--time-navbar) ease;
+  padding: 32px;
+}

@@ -1,0 +1,191 @@
+/* ----------------- SECÇÃO HERO ----------------- */
+.app_section_herotext {
+    display: flex;
+    padding: 40px 2.5%;
+    gap: 40px;
+    background-image: linear-gradient(to right bottom, oklch(0.98 0.016 73.684) 0%, oklch(0.987 0.022 95.277) 50%, oklch(0.987 0.026 102.212) 100%);
+    z-index: 1;
+    width: 100%;
+    position: relative;
+}
+
+/* ----------------- SECÇÃO HERO PARTE TEXTO ----------------- */
+.herotxt {
+    max-width: 600px;
+    overflow-wrap: break-word;
+}
+
+/* ----------------- SECÇÃO HERO TEXTO COM BOLINHA VERDE ----------------- */
+.chamariz {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 20px;
+    background-color: #ffffff;
+    width: 325px;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.10);
+    margin-bottom: 50px;
+}
+
+/* ----------------- SECÇÃO HERO TEXTO COM BOLINHA VERDE ESTILO DA BOLINHA ----------------- */
+.chamariz::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0bcb58;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+/* ----------------- SECÇÃO HERO TEXTO PRINCIPAL ----------------- */
+.titulo1, .titulo2 {
+    font-size: 44px;
+    font-weight: 700; /* Adiciona negrito ao texto */;
+    position: relative;
+    margin-left: 30px;
+    line-height: 1.5;
+}
+
+.titulo2 {
+    background: linear-gradient(90deg, #f54a00, #e27100);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ----------------- SECÇÃO HERO PARAGRAFO ----------------- */
+.txt {
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    line-height: 2;
+}
+
+/* ----------------- ESTILO DO BOTÃO "FALAR COM ATENDENTE" ----------------- */
+.button_compra {
+    border:  none;
+    border-radius: 10px;
+    background-color: #f34d00;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.button_compra:hover {
+    background-color: #ca3500;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ----------------- ESTILO DO BOTÃO "VER DEMONSTRAÇÃO" ----------------- */
+.button_demo {
+    border:  0.2px solid #c7c7c7;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.button_demo:hover {
+    background-color: #e9ebef;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button_demo::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(-45deg) translateY(-2px);
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* ----------------- ESTILO DA IMAGEM HERO ----------------- */
+
+.heroimg{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.heroimg img {
+    width: 100%;
+    height: 56.25%;
+    max-width: 550px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+    border-radius: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+/* ----------------- RESPONSIVIDADE ----------------- */
+
+@media (max-width: 1160px) {
+
+    /*FAZ COM QUE A SECÇÃO FIQUE EM COLUNA E CENTRALIZADA HORIZONTALMENTE*/
+    .app_section_herotext {
+        display: block;
+        justify-items: center;
+    }
+
+    /*CORRIGE A OPSIÇÃO VERTICAL DA IMAGEM PARA QUANDO A TELA FICAR MENOR*/
+    .heroimg img {
+        margin-top: 10%;
+        transform: translateY(0%);
+    }
+
+    /*PARA TELAS MENORES FAZ OS OJETOS FICAREM CENTRALIZADOS*/
+    .herotxt {
+        justify-items: center;
+    }
+
+    /*FORÇA O TEXTO CHAMARIZ FICAR A ESQUERDA DA TELA*/
+    .chamariz {
+        position: absolute;
+        left: 38px;
+        top: 40px;
+    }
+
+    /* CORRIGE O TEXTO TITULO PARA NÃO FICAR SOBREPOSTO COM TEXTO CHAMARIZ */
+    .titulo1 {
+        margin-top: 50px;
+    }
+
+    /* CORRIGE QUANDO O OS BOTÕES FICAM UM SOB O OUTRO */
+    .button_compra {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    /*PARA TELAS MUITO PEQUENAS, GARANTE QUE NÃO VAI FICAR NA BORDA*/
+    .titulo1, .titulo2 {
+        margin-left: 5%;
+    }
+
+    /* ENCAIXA A IMAGEM NA TELA */
+    .heroimg img {
+        width: 90%;
+    }
+}

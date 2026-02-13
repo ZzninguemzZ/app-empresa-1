@@ -1,0 +1,55 @@
+/* ----------- FAZ O SITE OCUPARA TODA A TELA ----------- */
+* {
+  margin: 0;
+  font-family:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* ----------- DEFINE AS CORES DO SITE ----------- */
+:root {
+  --background-header: oklab(0.999994 0.0000455677 0.0000200868 / 0.95);
+  --background-hero: linear-gradient(
+    to right bottom,
+    oklch(0.98 0.016 73.684) 0%,
+    oklch(0.987 0.022 95.277) 50%,
+    oklch(0.987 0.026 102.212) 100%
+  );
+  --background-pattern-1: white;
+  --background-pattern-2: oklab(73.16% 0 -0.00008 / 0.24);
+  --background-pattern-3: oklch(0.21 0.034 264.665);
+  --background-pattern-4: oklch(0.646 0.222 41.116);
+  --background-pattern-5: rgba(0, 0, 0, 0.45);
+  --background-pattern-6: oklch(0.852 0.199 91.936);
+  --background-pattern-7: oklch(0.21 0.034 264.665);
+  --background-pattern-8: oklch(0.278 0.033 256.848);
+  --background-pattern-9: #ffebd1;
+  --background-pattern-10: rgb(243, 243, 245);
+
+  --background-image-pattern-1: linear-gradient(
+    to right bottom,
+    oklch(0.646 0.222 41.116) 0%,
+    oklch(0.666 0.179 58.318) 100%
+  );
+
+  --color-text-1: white;
+  --color-text-2: black;
+  --color-text-3: rgb(113, 113, 130);
+  --color-text-4: oklch(0.646 0.222 41.116);
+  --color-text-5: oklch(0.707 0.022 261.325);
+  --color-text-6: oklch(0.872 0.01 258.338);
+
+  --border-color-1: rgba(0, 0, 0, 0.1);
+  --border-color-2: rgba(61, 35, 1, 0.377);
+  --border-color-3: #ececec;
+  --border-color-4: rgba(0, 0, 0, 0.267);
+
+  --icon-color-1: #1fce65;
+
+  --width-navbar: 260px;
+
+  --time-navbar: 0.3s;
+}
